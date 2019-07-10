@@ -33,6 +33,10 @@ public class ToDoListApp {
 				break;
 			case 6:
 				quit=false;
+				break;
+			case 7:
+				modifyTask(scanner);
+				break;
 			}
 		}
 		System.out.println("goodbye ");
@@ -89,6 +93,26 @@ public class ToDoListApp {
 		Task task = new Task(description);
 		toDoList.addTask(task);
 	}
+	
+	private static void modifyTask(Scanner scanner) {
+		String description;
+		// complete a task
+		System.out.print("Please input the task description in which you want to modify: ");
+		description = scanner.nextLine();
+		task = new Task(description);
+		try {
+			toDoList.getTask(description);
+			System.out.print("Change " + toDoList.getTask(description).getDescription());
+			System.out.print("Please input the task description in which you want to modify: ");
+			String descriptionNew = scanner.nextLine();
+			toDoList.removeTask(description);
+			task = new Task(descriptionNew);
+			toDoList.addTask(task);
+			System.out.println(toDoList.getTask(description).getDescription() + " successfully modified");
+		} catch (Exception e) {
+			System.out.println("Error in modfy a task");
+		}
+	}
 
 	public static int printScreenMenu(Scanner scanner) {
 		int choice;
@@ -102,6 +126,7 @@ public class ToDoListApp {
 		System.out.println("4. Complete a task");
 		System.out.println("5. View completed tasks");
 		System.out.println("6. Quit ");
+		System.out.println("7. Modify tasks");
 		System.out.print("Your  choice: ");
 		choice = scanner.nextInt();
 		scanner.nextLine();
