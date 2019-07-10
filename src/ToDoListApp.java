@@ -13,7 +13,7 @@ public class ToDoListApp {
 		toDoList = new ToDoList();
 		boolean quit=true;
 		while (quit) {
-			choice = pritnScreenMenu(scanner);
+			choice = printScreenMenu(scanner);
 
 			switch (choice) {
 			case 1:
@@ -34,7 +34,8 @@ public class ToDoListApp {
 			case 6:
 				quit=false;
 			}
-		}System.out.println("goodbye ");
+		}
+		System.out.println("goodbye ");
 
 	}
 
@@ -89,7 +90,7 @@ public class ToDoListApp {
 		toDoList.addTask(task);
 	}
 
-	public static int pritnScreenMenu(Scanner scanner) {
+	public static int printScreenMenu(Scanner scanner) {
 		int choice;
 		System.out.println("");
 
