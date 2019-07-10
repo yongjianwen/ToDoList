@@ -94,7 +94,7 @@ public class ToDoListApp {
 		// print system menu
 		System.out.println("Please select an option: ");
 		System.out.println("1. Add a new task");
-		System.out.println("2. Remove a task");
+		System.out.println("2. Remove an existing task");
 		System.out.println("3. View all tasks");
 		System.out.println("4. Complete a task");
 		System.out.println("5. View completed tasks");
