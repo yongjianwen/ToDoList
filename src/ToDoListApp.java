@@ -7,7 +7,7 @@ public class ToDoListApp {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int choice;
-		String description;
+		//String description;
 
 		// initialize a new to-do list
 		toDoList = new ToDoList();
