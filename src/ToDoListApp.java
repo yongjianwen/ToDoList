@@ -11,8 +11,8 @@ public class ToDoListApp {
 
 		// initialize a new to-do list
 		toDoList = new ToDoList();
-
-		while (true) {
+		boolean quit=true;
+		while (quit) {
 			choice = pritnScreenMenu(scanner);
 
 			switch (choice) {
@@ -31,8 +31,10 @@ public class ToDoListApp {
 			case 5:
 				viewCompletedTasks();
 				break;
+			case 6:
+				quit=false;
 			}
-		}
+		}System.out.println("goodbye ");
 
 	}
 
@@ -98,6 +100,7 @@ public class ToDoListApp {
 		System.out.println("3. View all tasks");
 		System.out.println("4. Complete a task");
 		System.out.println("5. View completed tasks");
+		System.out.println("6. Quit ");
 		System.out.print("Your  choice: ");
 		choice = scanner.nextInt();
 		scanner.nextLine();
