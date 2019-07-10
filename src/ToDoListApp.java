@@ -54,13 +54,13 @@ public class ToDoListApp {
 	public static void completeATask(Scanner scanner) {
 		String description;
 		// complete a task
-		System.out.print("Please input the task description in which you want to complete: ");
+		System.out.print("Please input the task description for the task you wish to complete: ");
 		description = scanner.nextLine();
 		try {
 			toDoList.completeTask(description);
 			System.out.println(toDoList.getTask(description).getDescription() + " successfully completed");
 		} catch (Exception e) {
-			System.out.println("Error in completing a task");
+			System.out.println("Error in completing task");
 		}
 	}
 
@@ -126,7 +126,7 @@ public class ToDoListApp {
 		System.out.println("4. Complete a task");
 		System.out.println("5. View completed tasks");
 		System.out.println("6. Quit ");
-		System.out.println("7. Modify tasks");
+		System.out.println("7. Modify an existing tasks");
 		System.out.print("Your  choice: ");
 		choice = scanner.nextInt();
 		scanner.nextLine();
